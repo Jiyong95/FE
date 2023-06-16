@@ -1,0 +1,52 @@
+@keyframes eyeAni{
+  0% {transform: scale(0.9);}
+  100% {transform: scale(1.1);}
+}
+
+.svg{
+  background-color: #faebd7;
+  width: 200px;
+  position: absolute;
+  top:0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  
+  &.aniOn{
+    background-color: red;
+    .eye{
+     animation: eyeAni 1s infinite alternate;
+
+       &:nth-of-type(2){ //2번째 circle을 지정.
+        transform-origin: 175px 380.5px;
+      }
+      &:nth-of-type(3){ //3번째 circle을 지정.
+        transform-origin: 397px 380.5px;
+      }
+    }
+   }
+
+}
+
+.hair{
+  fill:brown;
+  
+  &:nth-of-type(1){ //첫번째 hair를 지정
+    fill: green;
+  }
+}
+
+
+// .eye{
+//   // transform-origin: center center;
+//   animation: eyeAni 1s infinite alternate;
+
+//   &:nth-of-type(2){ //2번째 circle을 지정.
+//     transform-origin: 175px 380.5px;
+//   }
+//   &:nth-of-type(3){ //3번째 circle을 지정.
+//     transform-origin: 397px 380.5px;
+//   }
+// }
+
